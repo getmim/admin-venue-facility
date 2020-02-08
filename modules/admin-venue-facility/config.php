@@ -2,7 +2,7 @@
 
 return [
     '__name' => 'admin-venue-facility',
-    '__version' => '0.0.1',
+    '__version' => '0.0.2',
     '__git' => 'git@github.com:getmim/admin-venue-facility.git',
     '__license' => 'MIT',
     '__author' => [
@@ -30,6 +30,9 @@ return [
             ],
             [
                 'venue-facility' => NULL
+            ],
+            [
+                'admin-venue' => NULL 
             ]
         ],
         'optional' => []
@@ -103,7 +106,11 @@ return [
                         'required' => true,
                         'unique' => [
                             'model' => 'VenueFacility\\Model\\VenueFacility',
-                            'field' => 'name'
+                            'field' => 'name',
+                            'self' => [
+                                'service' => 'req.param.id',
+                                'field' => 'id'
+                            ]
                         ]
                     ]
                 ]
