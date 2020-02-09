@@ -2,7 +2,7 @@
 
 return [
     '__name' => 'admin-venue-facility',
-    '__version' => '0.0.2',
+    '__version' => '0.0.3',
     '__git' => 'git@github.com:getmim/admin-venue-facility.git',
     '__license' => 'MIT',
     '__author' => [
@@ -98,6 +98,13 @@ return [
     ],
     'libForm' => [
         'forms' => [
+            'admin.venue.edit' => [
+                'facility' => [
+                    'label' => 'Facility',
+                    'type' => 'checkbox-group',
+                    'rules' => []
+                ]
+            ],
             'admin.venue-facility.edit' => [
                 'name' => [
                     'label' => 'Name',
